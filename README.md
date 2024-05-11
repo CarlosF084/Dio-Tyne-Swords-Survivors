@@ -6,7 +6,7 @@ Aluno: Carlos Filho
 
 ### Objetivo
 
-Criar um jogo estilo "Vampire Survivol" utilizando assets gratuitos.
+Criar um jogo estilo "Vampire Survivors" utilizando assets gratuitos.
 
 ### Assets Utilizados
 * [Itch.io: Tyne Swords](https://pixelfrog-assets.itch.io/tiny-swords)
