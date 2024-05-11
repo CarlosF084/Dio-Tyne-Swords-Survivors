@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://cr88ya2wb74jx"]
+
+[ext_resource type="PackedScene" uid="uid://cum8xqx03ucel" path="res://misc/meat.tscn" id="1_4ixkt"]
+
+[node name="GoldenMeat" instance=ExtResource("1_4ixkt")]
+self_modulate = Color(3, 2.4, 0, 1)
+position = Vector2(0, -40)
+scale = Vector2(1.5, 1.5)
+regeneration_amount = 100
+
+[node name="Area2D" parent="." index="0"]
+visible = false

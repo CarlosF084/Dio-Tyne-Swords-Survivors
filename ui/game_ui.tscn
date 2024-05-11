@@ -1,0 +1,81 @@
+[gd_scene load_steps=9 format=3 uid="uid://c63loxxwcjyx8"]
+
+[ext_resource type="Texture2D" uid="uid://s3l7pfcrgad2" path="res://assets/sprites/UI/Banners/Banner_Horizontal.png" id="1_clgpn"]
+[ext_resource type="Script" path="res://ui/game_ui.gd" id="1_ybblq"]
+[ext_resource type="Texture2D" uid="uid://dc5updq4k8ag5" path="res://assets/sprites/Resources/Resources/M_Idle_(NoShadow).png" id="3_y5goe"]
+
+[sub_resource type="SystemFont" id="SystemFont_2xl6l"]
+font_names = PackedStringArray("Leelawadee UI")
+font_weight = 999
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_u41i7"]
+font = SubResource("SystemFont_2xl6l")
+font_size = 32
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pfgpm"]
+texture = ExtResource("1_clgpn")
+texture_margin_left = 32.0
+texture_margin_top = 16.0
+texture_margin_right = 32.0
+texture_margin_bottom = 48.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(32, 48, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vraha"]
+atlas = ExtResource("3_y5goe")
+region = Rect2(40, 48, 56, 56)
+
+[sub_resource type="LabelSettings" id="LabelSettings_kp678"]
+font = SubResource("SystemFont_2xl6l")
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+
+[node name="GameUi" type="CanvasLayer"]
+script = ExtResource("1_ybblq")
+
+[node name="TimerLabel" type="Label" parent="."]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -49.0
+offset_top = 19.0
+offset_right = 51.0
+offset_bottom = 63.0
+grow_horizontal = 2
+text = "00:00"
+label_settings = SubResource("LabelSettings_u41i7")
+horizontal_alignment = 1
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -193.0
+offset_top = 18.0
+offset_right = -16.0
+offset_bottom = 105.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_pfgpm")
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 7.0
+offset_right = 67.0
+offset_bottom = 47.0
+texture = SubResource("AtlasTexture_vraha")
+expand_mode = 1
+
+[node name="MeatLabel" type="Label" parent="Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 74.0
+offset_right = 154.0
+offset_bottom = 55.0
+text = "0"
+label_settings = SubResource("LabelSettings_kp678")
+horizontal_alignment = 1
+vertical_alignment = 1
